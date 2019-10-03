@@ -1,9 +1,19 @@
+.data
+.ALIGN 8
+inp_struct:
+.word 0x2
+.ascii "ala ma srake\n\0"
+
+.text
 .global _Reset
 _Reset:
  LDR sp, =stack_top
- ldr r0, =value
- ldr r1, =input
+ ldr r0, =inp_struct
  BL c_entry
  B .
-value: .word 0x2
-input: .ascii "ala ma kota\n\0"
+
+.globl UART_PUT32
+UART_PUT32:
+  ldr r1, =#0x101f1000
+  str r0, [r1]
+  bx lr

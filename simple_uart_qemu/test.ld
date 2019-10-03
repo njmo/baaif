@@ -3,6 +3,7 @@ SECTIONS
 {
  . = 0x10000;
  .startup . : { startup.o(.text) }
+ .dupajasia : { *(.dupajasia) }
  .text : { *(.text) }
  .data : { *(.data) }
  .bss : { *(.bss COMMON) }
