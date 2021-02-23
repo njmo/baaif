@@ -1,0 +1,5 @@
+stm8-gdb test.elf --tui
+target extended-remote localhost:3333
+load
+break main
+continue

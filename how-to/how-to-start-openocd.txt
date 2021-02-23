@@ -1,0 +1,2 @@
+C:\Users\adamsi\Downloads\openocd-20201228\OpenOCD-20201228-0.10.0\bin>openocd.exe -f ..\share\openocd\scripts\interface\stlink-dap.cfg -f ..\share\openocd\scripts\target\stm8s105.cfg -c "bindto 0.0.0.0" -c "init" -c "reset halt"
+

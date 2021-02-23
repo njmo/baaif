@@ -7,7 +7,7 @@ PROGRAMMER=stlink
 NAME=file
 SDAS=sdasstm8
 SDCC=sdcc
-LDFLAGS=--out-fmt-ihx
+LDFLAGS=--out-fmt-elf
 CFLAGS=
 FLASH=stm8flash
 BUILD=build/
@@ -16,7 +16,7 @@ SYMBOLS=$(OBJECTS:.rel=.sym)
 ASMS=$(OBJECTS:.rel=.asm)
 LISTS=$(OBJECTS:.rel=.lst)
 RSTS=$(OBJECTS:.rel=.rst)
-TARGET=$(BUILD)$(NAME).ihx
+TARGET=$(BUILD)$(NAME).elf
 MAP=$(TARGET:.ihx=.map)
 LK=$(TARGET:.ihx=.lk)
 CDB=$(TARGET:.ihx=.cdb)
@@ -32,7 +32,7 @@ flash: $(TARGET)
 	$(SDAS) -g -l -o $(BUILD)$(NAME).rel $(NAME).asm
 
 $(TARGET): $(OBJECTS)
-	$(SDCC) -mstm8 -lstm8 $(LDFLAGS) -o $@ $(OBJECTS)
+	$(SDCC) -mstm8 $(LDFLAGS) -o $@ $(OBJECTS)
 
 clean:
 	rm -f $(BUILD)*
