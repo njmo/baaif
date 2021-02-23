@@ -31,7 +31,7 @@ ptr: .blkb 1
 ;     table des vecteurs d'interruption
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     .area HOME
-    int main  ; vecteur de réinitialisation
+ int main  ; vecteur de réinitialisation
  int NonHandledInterrupt ;TRAP  software interrupt
  int NonHandledInterrupt ;int0 TLI   external top level interrupt
  int NonHandledInterrupt ;int1 AWU   auto wake up from halt
@@ -121,7 +121,7 @@ loop:
    ret
 
 napis:
-.ascii "Marcin to gej"
+.ascii "Marcin to lej"
 .byte 0xd, 0xa, 0
 napis_len = (.-napis)
 

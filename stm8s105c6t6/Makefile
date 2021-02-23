@@ -3,7 +3,7 @@
 ###########################################################
 
 BOARD=stm8s105c6
-PROGRAMMER=stlinkv21
+PROGRAMMER=stlink
 NAME=file
 SDAS=sdasstm8
 SDCC=sdcc
