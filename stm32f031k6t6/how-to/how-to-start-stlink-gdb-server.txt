@@ -1,0 +1,19 @@
+st-util application:
+  λ > sudo st-util
+  st-util
+  2021-10-04T20:24:52 INFO common.c: F0xx small: 4 KiB SRAM, 32 KiB flash in at least 1 KiB pages.
+  2021-10-04T20:24:52 INFO gdb-server.c: Listening at *:4242...
+  2021-10-04T20:25:32 INFO common.c: F0xx small: 4 KiB SRAM, 32 KiB flash in at least 1 KiB pages.
+  2021-10-04T20:25:32 INFO gdb-server.c: Found 4 hw breakpoint registers
+  2021-10-04T20:25:32 INFO gdb-server.c: GDB connected.
+  2021-10-04T20:25:42 INFO common.c: F0xx small: 4 KiB SRAM, 32 KiB flash in at least 1 KiB pages.
+  2021-10-04T20:25:42 INFO gdb-server.c: flash_erase: block 08000000 -> 0400
+  2021-10-04T20:25:42 INFO gdb-server.c: flash_erase: page 08000000
+  2021-10-04T20:25:42 INFO common.c: Starting Flash write for VL/F0/F3/F1_XL
+  2021-10-04T20:25:42 INFO flash_loader.c: Successfully loaded flash loader in sram
+  2021-10-04T20:25:42 INFO flash_loader.c: Clear DFSR
+  2021-10-04T20:25:42 INFO gdb-server.c: flash_do: block 08000000 -> 0400
+  2021-10-04T20:25:42 INFO gdb-server.c: flash_do: page 08000000
+  2021-10-04T20:26:47 ERROR gdb-server.c: cannot recv: -2
+  2021-10-04T20:26:47 INFO gdb-server.c: Listening at *:4242...
+

@@ -1,0 +1,11 @@
+arm-none-eabi-gdb main.elf
+ (gdb) target extended-remote :4242
+
+upload code into machine:
+ (gdb) load | load main.elf
+
+run code:
+ (gdb) continue
+
+check registers:
+ (gdb) info registers
